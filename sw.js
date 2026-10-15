@@ -1,5 +1,5 @@
-// Experiment 7: versioned app shell; user records remain in localStorage.
-const CACHE = 'ovdp-lab-exp7-cache-v1';
+// Experiment 8: versioned app shell; user records remain in localStorage.
+const CACHE = 'ovdp-lab-exp8-cache-v1';
 const FILES = ['./', './index.html', './manifest.webmanifest'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
