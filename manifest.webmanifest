@@ -1,1 +1,10 @@
-{"name":"Лабораторія ОВДП — експеримент №6","short_name":"ОВДП тест №6","start_url":"./","scope":"./","display":"standalone","background_color":"#edf5f1","theme_color":"#207f72","lang":"uk"}
+{
+  "name": "Лабораторія ОВДП — експеримент №7",
+  "short_name": "ОВДП тест №7",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#edf5f1",
+  "theme_color": "#207f72",
+  "lang": "uk"
+}
