@@ -201,9 +201,9 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 #app.theme-dark[data-palette="peach"]{--ink:#f8f8ff;--accent:#9558ce;--bg1:#101928;--bg2:#4b2a87;--card:#162138ed}
 #app[data-palette="lavender"]{--ink:#22354c;--accent:#377d31;--accent2:#377d31;--bg1:#eaf8b9;--bg2:#f8ffe4;--card:#fffffff0;--theme-art:url("../assets/themes/lavender.svg")}
 #app.theme-dark[data-palette="lavender"]{--ink:#f8f8ff;--accent:#93d335;--bg1:#101928;--bg2:#377d31;--card:#162138ed}
-#app[data-palette="berry"]{--ink:#f8f5ff;--accent:#e9c76e;--accent2:#f5d987;--bg1:#112e70;--bg2:#dbe7ff;--card:#281d47ed;--theme-art:url("../assets/themes/berry.svg")}
-#app.theme-dark[data-palette="berry"]{--ink:#f8f8ff;--accent:#f0ce77;--accent2:#f4dc96;--bg1:#091b49;--bg2:#123e88;--card:#102553ed}
-#app[data-palette="autumn"]{--ink:#57311e;--accent:#ff9c1c;--accent2:#c62917;--bg1:#fff0c2;--bg2:#fff7dc;--card:#fffffff0;--theme-art:url("../assets/themes/autumn.svg")}
+#app[data-palette="berry"]{--ink:#f8f5ff;--accent:#1748ba;--accent2:#e8bc53;--bg1:#112e70;--bg2:#dbe7ff;--card:#281d47ed;--theme-art:url("../assets/themes/berry.svg")}
+#app.theme-dark[data-palette="berry"]{--ink:#f8f8ff;--accent:#1748ba;--bg1:#101928;--bg2:#e8bc53;--card:#162138ed}
+#app[data-palette="autumn"]{--ink:#f8f5ff;--accent:#ff9c1c;--accent2:#c62917;--bg1:#fff0c2;--bg2:#fff7dc;--card:#fffffff0;--theme-art:url("../assets/themes/autumn.svg")}
 #app.theme-dark[data-palette="autumn"]{--ink:#f8f8ff;--accent:#e5bd66;--bg1:#101928;--bg2:#c62917;--card:#162138ed}
 #app[data-palette="sky"]{--ink:#22354c;--accent:#0dc5c5;--accent2:#007baf;--bg1:#d9ffff;--bg2:#f2ffff;--card:#fffffff0;--theme-art:url("../assets/themes/sky.svg")}
 #app.theme-dark[data-palette="sky"]{--ink:#f8f8ff;--accent:#0dc5c5;--bg1:#101928;--bg2:#007baf;--card:#162138ed}
@@ -215,28 +215,33 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 #app.theme-dark{background-image:linear-gradient(145deg,#070c20b8,#070c20b0),var(--theme-art)}
 #app[data-palette="autumn"] .day .count,#app[data-palette="autumn"] .pill{color:#684008}
 
-/* v1.11: лише корекція палітр; жодних змін розмітки чи логіки. */
-/* Сапфір: усунуто успадковані зелені/помаранчеві тони в індикаторах та картках. */
-#app[data-palette="berry"] .pill,#app[data-palette="berry"] .badge{background:#f2d88b29;color:#f3d77e}
-#app[data-palette="berry"] .day .count{color:#f1cf72}
-#app[data-palette="berry"] .day.selected .count{color:#fff1bf}
-#app[data-palette="berry"] .day.today{outline-color:#e5c56c}
-#app[data-palette="berry"] nav button.active{color:#f2d78b;background:#e8c66c24}
-#app[data-palette="berry"] .facts>div{background:#f2d88b1b}
-#app[data-palette="berry"] .item{background:#1b3269e8;color:#f7f3e7;border-color:#d7bb7545}
-#app[data-palette="berry"] .item small{color:#d9dfed}
-#app[data-palette="berry"] .secondary{background:#d8c084;color:#172c5a}
-#app[data-palette="berry"] .notice{background:#e7c87d33;color:#fff0c7}
-#app[data-palette="berry"] .compare-table>div{background:#20386c;color:#fff7e5}
-#app[data-palette="berry"] .compare-table .compare-head{background:#35528a}
-#app[data-palette="berry"] .compare-table .compare-label{background:#2c4477}
-#app.theme-dark[data-palette="berry"] .day.selected{background:#2b4e8a}
-#app.theme-dark[data-palette="berry"] .day .count{color:#f2d78b}
-#app.theme-dark[data-palette="berry"] .day.selected .count{color:#fff5d4}
-/* Лагуна: події мають чіткі темно-бірюзові, а не блідо-голубі індикатори. */
-#app[data-palette="sky"]{--accent:#007f86;--accent2:#006b99}
-#app.theme-dark[data-palette="sky"]{--accent:#61e3dd;--accent2:#8dd7fa}
-#app[data-palette="sky"] .day .count{color:#006d77}
-#app[data-palette="sky"] .day.selected .count{color:#ffffff}
-#app[data-palette="sky"] .pill,#app[data-palette="sky"] .badge{background:#007f8620;color:#005c69}
-#app.theme-dark[data-palette="sky"] .pill,#app.theme-dark[data-palette="sky"] .badge{background:#61e3dd20;color:#a3fff3}
+
+/* v1.10 — targeted readability and calendar corrections; backgrounds unchanged. */
+/* A single payment never stretches to fill the available list height. */
+#app.calendar-mode .calendar-details .event-list{align-content:start;grid-auto-rows:max-content}
+#app .calendar-details .event-item{min-height:76px;height:auto;align-self:start}
+/* Plain counts, a modest upward shift, no square badges. */
+#app .calendar-grid .day .count-slot{transform:translateY(-2px)}
+#app .calendar-grid .day .count{width:auto;min-width:0;height:auto;line-height:1.1;margin:0;padding:0;border-radius:0;background:none!important;color:var(--count-ink,var(--ink))!important;font-size:11px;font-weight:800;text-shadow:none}
+#app.theme-dark .calendar-grid .day .count{color:var(--count-ink,#f4e7b7)!important}
+/* Preserve the rounded rectangular calendar tile under the circular selection. */
+#app .calendar-grid .day.selected:not(.today){background:color-mix(in srgb,var(--card) 79%,var(--accent) 21%);border-color:color-mix(in srgb,var(--accent) 12%,transparent)}
+#app .calendar-grid .day.selected:not(.today)::after{background:color-mix(in srgb,var(--accent) 13%,transparent);border:1.5px solid var(--accent)}
+#app .calendar-grid .day.today.selected::after{background:color-mix(in srgb,var(--accent) 13%,transparent);border:1.5px solid var(--accent)}
+#app.theme-dark .calendar-grid .day.today.selected::after{background:color-mix(in srgb,var(--accent) 13%,transparent);border:1.5px solid var(--accent)}
+/* Headings on dark artistic backdrops must be legible independently of card text. */
+#app[data-palette="berry"] header .brand strong,#app[data-palette="berry"] #screen>h1,
+#app[data-palette="lime"] header .brand strong,#app[data-palette="lime"] #screen>h1{color:#fffaf5;text-shadow:0 1px 3px #10112660}
+#app[data-palette="berry"] header .brand small,#app[data-palette="lime"] header .brand small{color:#f1eaf9}
+/* In sapphire light mode, dark panels have their own foreground. */
+#app[data-palette="berry"]:not(.theme-dark) .card{color:#f8f5ff}
+#app[data-palette="berry"]:not(.theme-dark) .card .muted{color:#d8d5eb}
+#app[data-palette="berry"]:not(.theme-dark) .calendar-grid .day{color:#f8f5ff}
+#app[data-palette="berry"]:not(.theme-dark) .calendar-grid .day .count{color:#f5d58a!important}
+#app[data-palette="berry"]:not(.theme-dark) .calendar-details .event-item{color:#f8f5ff}
+#app[data-palette="berry"]:not(.theme-dark) .calendar-details .event-item small{color:#d2dfdb}
+/* Orange has light cards: use dark card text and a dark count. */
+#app[data-palette="autumn"]:not(.theme-dark){--ink:#293d39;--count-ink:#69400c}
+#app[data-palette="autumn"]:not(.theme-dark) header .brand strong,#app[data-palette="autumn"]:not(.theme-dark) #screen>h1{color:#273c36}
+/* Theme-specific card heading colors for amethyst light panels. */
+#app[data-palette="lime"]:not(.theme-dark) .card{color:#24354b}
