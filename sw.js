@@ -1,41 +1,31 @@
-// Experiment 8: versioned app shell; user records remain in localStorage.
-const CACHE = 'ovdp-lab-exp8-cache-v1';
-const FILES = ['./', './index.html', './manifest.webmanifest'];
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
-});
-self.addEventListener('activate', event => {
-  event.waitUntil((async () => {
-    const keys = await caches.keys();
-    await Promise.all(keys.filter(k => k.startsWith('ovdp-lab-exp') && k !== CACHE).map(k => caches.delete(k)));
-    await self.clients.claim();
-  })());
-});
-self.addEventListener('fetch', event => {
-  const req = event.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
-  if (req.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const response = await fetch(req, {cache:'no-store'});
-        if (response.ok) {
-          const cache = await caches.open(CACHE);
-          await Promise.all([cache.put('./index.html', response.clone()), cache.put('./', response.clone())]);
-        }
-        return response;
-      } catch (e) {
-        return (await caches.match('./index.html')) || (await caches.match('./')) || Response.error();
+// Offline shell, versioned independently from user data in IndexedDB.
+const CACHE='ovdp-lab-shell-v112';
+const ASSETS=['./','./index.html','./src/app.js','./src/db.js','./src/nbu.js','./src/yield.js','./src/forecast.js','./src/compare.js','./src/style.css','./manifest.webmanifest','./assets/icon.svg','./assets/themes/rose.svg','./assets/themes/peach.svg','./assets/themes/lavender.svg','./assets/themes/berry.svg','./assets/themes/autumn.svg','./assets/themes/sky.svg','./assets/themes/lime.svg','./assets/themes/emerald.svg','./data/nbu-snapshot.json'];
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+  const cache=await caches.open(CACHE);
+  await cache.addAll(ASSETS);
+  await self.skipWaiting();
+})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{
+  const keys=await caches.keys();
+  await Promise.all(keys.filter(key=>key.startsWith('ovdp-lab-shell-')&&key!==CACHE).map(key=>caches.delete(key)));
+  await self.clients.claim();
+})()));
+self.addEventListener('fetch',event=>{
+  const request=event.request;
+  if(request.method!=='GET')return;
+  const url=new URL(request.url);
+  if(url.origin!==self.location.origin)return; // NBU is online-only and never faked by the cache.
+  event.respondWith((async()=>{
+    const cache=await caches.open(CACHE);
+    const cached=await cache.match(request);
+    if(cached)return cached;
+    try{return await fetch(request)}catch(error){
+      if(request.mode==='navigate'){
+        const fallback=await cache.match('./index.html');
+        if(fallback)return fallback;
       }
-    })());
-    return;
-  }
-  event.respondWith((async () => {
-    try {
-      const response = await fetch(req, {cache:'no-store'});
-      if (response.ok) (await caches.open(CACHE)).put(req, response.clone()).catch(()=>{});
-      return response;
-    } catch (e) {
-      return (await caches.match(req, {ignoreSearch:true})) || Response.error();
+      throw error;
     }
   })());
 });
