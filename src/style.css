@@ -1,0 +1,242 @@
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#263a37;background:#d7e8df;--ink:#263a37;--accent:#267869;--accent2:#e8a479;--card:#fffffff0;--bg1:#e6f5ec;--bg2:#fbe5da}*{box-sizing:border-box}body{margin:0}#app{max-width:780px;min-height:100dvh;margin:auto;display:flex;flex-direction:column;background:radial-gradient(ellipse at 92% 9%,#ffffff9c 0,transparent 36%),radial-gradient(ellipse at 4% 70%,#a4d5c455 0,transparent 50%),linear-gradient(155deg,var(--bg1),var(--bg2));box-shadow:0 0 60px #233c3120}header{display:flex;justify-content:space-between;align-items:center;padding:20px 19px 12px}.brand{display:flex;gap:10px;align-items:center}.brand strong{display:block;font-size:19px}.brand small{display:block;font-size:11px;color:#5d726c}.mark{font-size:25px}.icon{width:42px;height:42px;border-radius:14px}main{padding:8px 16px 24px;flex:1;min-height:70dvh}nav{position:sticky;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);background:#fffffff5;box-shadow:0 -4px 25px #234c3b18;padding-bottom:env(safe-area-inset-bottom)}nav button{border-radius:0;background:transparent;color:#61726d;padding:11px 0;font-size:21px}nav button span{display:block;font-size:11px}nav button.active{color:var(--accent);background:#d6eee450}button{font:inherit;cursor:pointer;border:0;border-radius:13px;background:var(--accent);color:white;padding:11px 15px}button.secondary{background:#e4ece8;color:var(--ink)}button.ghost{background:transparent;color:var(--accent);padding:8px}button:disabled{opacity:.55}input,select,textarea{width:100%;font:inherit;padding:12px;border:1px solid #b8cac3;border-radius:11px;background:#fff;color:#203b36}textarea{min-height:110px;resize:vertical}label{display:block;font-size:13px;font-weight:650;margin:13px 0 5px}.card{background:var(--card);border:1px solid #ffffffb0;border-radius:19px;padding:17px;margin:12px 0;box-shadow:0 7px 24px #2c5a4312;backdrop-filter:blur(5px)}h1{font-size:24px;margin:8px 0 12px}h2{font-size:18px;margin:10px 0}h3{font-size:16px;margin:5px 0}p{line-height:1.5}small,.muted{color:#627570}.row{display:flex;align-items:center;justify-content:space-between;gap:9px}.wrap{flex-wrap:wrap}.stack{display:grid;gap:10px}.pill{border-radius:20px;background:#e7f0eb;padding:5px 10px;font-size:12px;color:#285e50}.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.weekday{text-align:center;font-size:11px;color:#5d736b;padding:8px 0}.day{height:55px;background:#fff9;border-radius:11px;padding:5px 2px;color:var(--ink);font-size:13px;border:1px solid #fff8}.day.today{outline:2px solid var(--accent)}.day.selected{background:var(--accent);color:white}.day .count{display:block;margin:3px auto 0;font-weight:750;font-size:11px;color:var(--accent)}.day.selected .count{color:white}.day.empty{visibility:hidden}.item{display:block;width:100%;text-align:left;background:#ffffffc9;color:var(--ink);border:1px solid #dce8e1;margin:7px 0;padding:12px;border-radius:13px}.item strong{display:block}.item small{display:block;margin-top:4px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.toolbar>*{flex:1}.tabs{display:flex;gap:6px}.tabs button{flex:1}.badge{font-size:12px;background:#e2f0e7;border-radius:15px;padding:5px 9px}dialog{width:min(94vw,600px);max-height:85dvh;overflow:auto;border:0;border-radius:21px;padding:20px;background:#fff;color:#243d36;box-shadow:0 12px 90px #0006}dialog::backdrop{background:#18372b9c}.close{width:100%;margin-top:15px}.notice{padding:12px;background:#fff3dc;border-radius:12px;font-size:13px}.error{color:#a22e31}.success{color:#216a4c}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{flex:1}.two{display:grid;grid-template-columns:1fr 1fr;gap:9px}.theme-dark{--ink:#e8f4ec;--card:#1c3839ec;--bg1:#102f37;--bg2:#244447;color:var(--ink)}.theme-dark header small,.theme-dark .muted,.theme-dark small{color:#b8cbc3}.theme-dark .item{background:#294749;color:#e7f6ec;border-color:#45605b}.theme-dark .day{background:#284b4b;color:#f3fff7;border-color:#3e5d58}.theme-dark .day.selected{background:var(--accent)}.theme-dark .pill,.theme-dark .badge{background:#2c5550;color:#dbf9e7}.theme-dark nav{background:#173839f2}.theme-dark nav button{color:#a8c4bb}.theme-dark nav button.active{color:#b8f4da}.theme-dark dialog{background:#183a37;color:white}.theme-dark .secondary{background:#45605b;color:white}.theme-dark .notice{background:#66552f;color:white}
+
+/* v0.4 — довідник, паспорт, календар */
+.filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.filter-grid label{min-width:0}.bond-card small{line-height:1.5}.legend{font-size:12px;margin-bottom:0}.event-scroll{max-height:53dvh;overflow-y:auto;overscroll-behavior:contain}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.facts>div{background:#e7f0e977;border-radius:12px;padding:10px;font-size:12px;min-width:0}.facts strong{display:block;font-size:14px;margin-top:5px;overflow-wrap:anywhere}.payment-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #b9c9bf70;padding:12px 2px}.payment-row small{display:block}.payment-row strong{white-space:nowrap;font-size:13px}.tabs button.chosen{background:var(--accent);color:white}.theme-dark .facts>div{background:#315553}.theme-dark .payment-row{border-color:#45605b}@media(max-width:360px){.filter-grid{grid-template-columns:1fr}.day{height:48px}.facts{gap:6px}.facts>div{padding:8px}}
+
+/* v0.6 — журнал і графік */
+.price-group{background:var(--card);border-radius:14px;margin:10px 0;padding:10px}.price-group summary{cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center}.price-group summary span{font-size:12px;color:var(--accent)}.price-entry{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #9baea44a;margin-top:10px;padding-top:10px}.price-entry small{display:block;margin-top:4px}.price-actions{display:flex;gap:3px}.price-actions button{padding:8px;font-size:12px}.chart-box{margin-top:16px;padding:8px;background:var(--card);border-radius:15px}.chart-box svg{width:100%;height:auto;display:block;overflow:visible}.chart-legends{display:flex;flex-wrap:wrap;gap:8px;margin:6px}.chart-legend{font-size:12px;display:inline-flex;gap:5px;align-items:center}.chart-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}.chart-box svg text{font-family:system-ui}.theme-dark .chart-box{background:#294749}@media(max-width:380px){.price-entry{align-items:flex-start;flex-direction:column}.price-actions{align-self:flex-end}}
+
+/* v0.8: compact mobile comparison, no horizontal scrolling */
+.compare-table{display:grid;grid-template-columns:minmax(74px,.9fr) repeat(var(--compare-count),minmax(0,1fr));gap:1px;background:#b4c9bd;border:1px solid #b4c9bd;border-radius:13px;overflow:hidden;margin:16px 0;font-size:clamp(10px,2.8vw,13px)}
+.compare-table>div{background:#ffffff;padding:10px 5px;overflow-wrap:anywhere;min-width:0}.compare-table .compare-head{background:#e0f1e9;font-weight:750;text-align:center}.compare-table .compare-label{background:#f0f5f1;font-weight:650}.compare-table .compare-value{text-align:center}.theme-dark .compare-table>div{background:#294749;color:#eff8f3}.theme-dark .compare-table .compare-head{background:#34695b}.theme-dark .compare-table .compare-label{background:#30514b}
+
+/* v0.9 — щоденник та вкладення */
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.image-tile{position:relative;border-radius:12px;overflow:hidden;background:#eef2ed;min-height:90px}.image-tile img{width:100%;height:145px;object-fit:contain;display:block}.image-tile button{position:absolute;top:5px;right:5px;padding:5px 10px}
+
+/* v1.0 · 8 художніх палітр × 2 режими. Усі кольори локальні, без зовнішніх ресурсів. */
+#app{--ink:#433b39;--accent:#9c5b64;--accent2:#e5a68d;--bg1:#fff1f0;--bg2:#f5e2e2;--ornament:#ce8d9c;--card:#fffdfaf2;position:relative;isolation:isolate}
+#app[data-palette="rose"]{--ink:#503c48;--accent:#a65075;--accent2:#e2a3ae;--bg1:#fff0f4;--bg2:#f4dce8;--ornament:#c979a3}
+#app[data-palette="peach"]{--ink:#4e3e39;--accent:#a45b47;--accent2:#e9ac86;--bg1:#fff2e9;--bg2:#f3d7c9;--ornament:#d68f71}
+#app[data-palette="lavender"]{--ink:#47415a;--accent:#7562a7;--accent2:#e5bc6e;--bg1:#f5f0ff;--bg2:#fff0d3;--ornament:#aa8ac9}
+#app[data-palette="berry"]{--ink:#4d3849;--accent:#943f70;--accent2:#dc93ae;--bg1:#fff0f8;--bg2:#edd8e9;--ornament:#b85c91}
+#app[data-palette="autumn"]{--ink:#4a4134;--accent:#956a28;--accent2:#cf9d4f;--bg1:#fff6e3;--bg2:#e9e1c5;--ornament:#c2a35b}
+#app[data-palette="sky"]{--ink:#354650;--accent:#326e9b;--accent2:#9dc9d6;--bg1:#edf8ff;--bg2:#dcecf6;--ornament:#77b4d2}
+#app[data-palette="lime"]{--ink:#313e37;--accent:#4b7350;--accent2:#bed477;--bg1:#f4f9e7;--bg2:#e0e9d4;--ornament:#8fae61}
+#app[data-palette="emerald"]{--ink:#304b42;--accent:#24765e;--accent2:#99d4b8;--bg1:#edf9f1;--bg2:#d8ede3;--ornament:#70b99a}
+#app::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:70px;right:0;width:min(46vw,260px);height:310px;opacity:.21;background:radial-gradient(ellipse 18px 40px at 51% 26%,var(--ornament) 98%,transparent 100%),radial-gradient(ellipse 18px 40px at 72% 47%,var(--ornament) 98%,transparent 100%),radial-gradient(ellipse 18px 40px at 31% 47%,var(--ornament) 98%,transparent 100%),radial-gradient(ellipse 18px 40px at 51% 69%,var(--ornament) 98%,transparent 100%),radial-gradient(circle at 51% 47%,var(--accent2) 0 13px,transparent 14px);transform:rotate(-20deg);filter:blur(.3px)}
+#app header,#app main,#app nav{position:relative;z-index:1}
+#app .card{border-color:#ffffffa8}
+#app .pill,#app .badge{background:color-mix(in srgb,var(--accent) 12%,white);color:var(--accent)}
+#app .day .count{color:var(--accent)}
+#app .day.selected .count{color:white}
+#app nav button.active{color:var(--accent);background:color-mix(in srgb,var(--accent) 11%,transparent)}
+#app .facts>div{background:color-mix(in srgb,var(--accent) 8%,white)}
+#app .secondary{background:color-mix(in srgb,var(--accent) 10%,white);color:var(--ink)}
+#app.theme-dark{--ink:#f1e9eb;--accent:#efb4c5;--accent2:#bd7b90;--bg1:#261d2b;--bg2:#382838;--ornament:#e0a4b8;--card:#332c3cf2}
+#app.theme-dark[data-palette="rose"]{--accent:#f1a6c7;--bg1:#271c2b;--bg2:#42273a;--ornament:#df93bd}
+#app.theme-dark[data-palette="peach"]{--accent:#ffc09e;--bg1:#2c2425;--bg2:#4b302c;--ornament:#df9a7b}
+#app.theme-dark[data-palette="lavender"]{--accent:#d0bbff;--bg1:#25233a;--bg2:#3d344c;--ornament:#bba1df}
+#app.theme-dark[data-palette="berry"]{--accent:#f1a1c7;--bg1:#2d2030;--bg2:#4c2944;--ornament:#d581b2}
+#app.theme-dark[data-palette="autumn"]{--accent:#f4cd83;--bg1:#2d2920;--bg2:#493b2a;--ornament:#dfba72}
+#app.theme-dark[data-palette="sky"]{--accent:#9fd5fa;--bg1:#1e2b39;--bg2:#294358;--ornament:#89b9df}
+#app.theme-dark[data-palette="lime"]{--accent:#c6e68e;--bg1:#242e28;--bg2:#354637;--ornament:#a6c579}
+#app.theme-dark[data-palette="emerald"]{--accent:#9ee5c5;--bg1:#1d302e;--bg2:#28483e;--ornament:#78c6a7}
+#app.theme-dark .card{background:var(--card);border-color:#ffffff22}
+#app.theme-dark .pill,#app.theme-dark .badge{background:#ffffff16;color:var(--accent)}
+#app.theme-dark .day .count{color:var(--accent)}
+#app.theme-dark .day.selected{background:#47685c}
+#app.theme-dark .day.selected .count{color:#fff}
+#app.theme-dark nav button.active{color:var(--accent);background:#ffffff10}
+#app.theme-dark .facts>div{background:#ffffff12}
+#app.theme-dark .secondary{background:#ffffff1b;color:#fff}
+#app.theme-dark .item{background:#ffffff12;color:var(--ink);border-color:#ffffff20}
+#app.theme-dark .price-group,#app.theme-dark .chart-box{background:var(--card)}
+#app.theme-dark .compare-table>div{background:#303d3c;color:#f2f7f3}
+#app.theme-dark .compare-table .compare-head{background:#3b5550}
+#app.theme-dark .compare-table .compare-label{background:#344843}
+.palette-preview{display:flex;align-items:center;gap:15px;padding:17px;margin:16px 0;border-radius:17px;border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);background:linear-gradient(125deg,var(--bg1),var(--bg2));color:var(--ink)}
+.palette-preview .preview-flower{font-size:48px;line-height:1;color:var(--accent)}
+.palette-preview small{display:block;margin-top:6px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* v1.4: mobile modal geometry, spacing and safe scroll */
+#dialog{position:fixed;inset-inline:0;margin-inline:auto;width:calc(100% - 28px);max-width:600px;min-width:0;max-height:calc(100dvh - 40px);overflow-x:hidden;overflow-y:auto;padding:18px;box-sizing:border-box;overscroll-behavior:contain}
+#dialogBody{min-width:0;width:100%;overflow-wrap:anywhere}
+#dialogBody>*{max-width:100%}
+.passport-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-bottom:16px}
+.passport-head h2{min-width:0;overflow-wrap:anywhere;flex:1 1 175px;margin:0}
+.passport-head #favorite{flex:0 1 auto;max-width:100%;white-space:normal}
+.passport-tabs{margin:0 0 18px;gap:8px;min-width:0}
+.passport-tabs button{min-width:0;padding-inline:6px}
+.passport-content{min-width:0;margin-bottom:18px}
+.passport-content .event-scroll{max-height:min(48dvh,420px)}
+#research{margin-top:12px}
+@media(max-width:390px){#dialog{padding:16px;width:calc(100% - 24px)}.passport-head{gap:10px}.passport-tabs{gap:6px}}
+
+/* v1.5: geometry, consistent calendar cells and docked navigation */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+#app{width:100%;max-width:780px;min-height:100dvh;overflow-x:clip;padding-bottom:calc(88px + env(safe-area-inset-bottom));}
+#app main{width:100%;min-width:0;min-height:0;padding-bottom:24px;overflow-x:clip}
+#app .row,#app .card,#app .item,#app .filter-grid{min-width:0;max-width:100%}
+#app nav{position:fixed;z-index:30;bottom:calc(8px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:calc(100% - 24px);max-width:756px;border-radius:23px;overflow:hidden;padding:5px;background:color-mix(in srgb,var(--card) 95%,white);box-shadow:0 6px 28px #163d3330}
+#app nav button{min-width:0;border-radius:18px;padding:9px 2px 8px}
+#app nav button.active{border-radius:18px}
+#app .calendar-card{padding:16px 12px 18px}
+#app .calendar-heading{margin:0 4px 10px}
+#app .calendar-heading h2{text-align:center;font-size:18px}
+#app .calendar-grid{gap:5px}
+#app .calendar-grid .weekday{padding:8px 0 10px}
+#app .calendar-grid .day{height:58px;min-width:0;display:grid;grid-template-rows:25px 22px;align-content:center;justify-items:center;gap:2px;padding:4px 0;border-radius:12px;background:color-mix(in srgb,var(--card) 72%,white);color:var(--ink);border:1px solid transparent;font-size:14px;line-height:1}
+#app .calendar-grid .day .date-number{display:flex;align-items:center;justify-content:center;height:25px;line-height:25px;font-variant-numeric:tabular-nums}
+#app .calendar-grid .day .count-slot{height:22px;width:100%;display:flex;align-items:center;justify-content:center}
+#app .calendar-grid .day .count{display:flex;align-items:center;justify-content:center;width:21px;height:21px;margin:0;border-radius:6px;background:color-mix(in srgb,var(--accent) 17%,white);color:var(--accent);font-size:11px;font-weight:750;line-height:1}
+#app .calendar-grid .day.today{border-radius:50%;background:color-mix(in srgb,var(--accent) 15%,white);outline:2px solid var(--accent);outline-offset:-2px}
+#app .calendar-grid .day.selected:not(.today){border-radius:50%;background:color-mix(in srgb,var(--card) 72%,white);outline:2px solid var(--accent);outline-offset:-2px}
+#app .calendar-grid .day.selected .count{color:var(--accent)}
+#app .calendar-grid .day.empty{visibility:hidden}
+#app .calendar-details{margin-top:16px;padding:15px}
+#app .calendar-details .details-heading{align-items:center;margin-bottom:12px}
+#app .calendar-details .details-heading h2{margin:0;font-size:17px}
+#app .calendar-details .event-list{display:grid;gap:8px}
+#app .calendar-details .event-item{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0;border-left:5px solid var(--accent);padding:11px 10px;background:color-mix(in srgb,var(--card) 87%,white)}
+#app .calendar-details .event-text{min-width:0;overflow-wrap:anywhere}
+#app .calendar-details .event-amount{display:flex;align-items:center;gap:8px;flex-shrink:0;font-weight:700;font-size:13px}
+#app .calendar-details .event-chevron{font-size:24px;font-weight:400;color:var(--accent)}
+#app.theme-dark .calendar-grid .day{background:color-mix(in srgb,var(--card) 82%,#42675e)}
+#app.theme-dark .calendar-grid .day.today{background:color-mix(in srgb,var(--accent) 25%,#263c38)}
+#app.theme-dark .calendar-grid .day.selected:not(.today){background:var(--card)}
+#app.theme-dark .calendar-grid .day .count{background:color-mix(in srgb,var(--accent) 22%,#253d39);color:var(--accent)}
+#app.theme-dark .calendar-details .event-item{background:#283b3b;color:#f5f5f3}
+#app.theme-dark .bond-card{background:#283b3b;color:#f5f5f3}
+#app.theme-dark .bond-card small{color:#d2dfdb}
+@media(max-width:390px){#app .calendar-grid{gap:3px}#app .calendar-grid .day{height:53px;grid-template-rows:23px 21px}#app .calendar-grid .day .date-number{height:23px;line-height:23px}#app .calendar-details .event-amount{font-size:12px}}
+
+/* v1.6 — compact calendar, exact circular markers, fixed-height event list */
+#app header{padding-top:12px;padding-bottom:9px}
+#app #screen>h1{margin-top:8px;margin-bottom:12px;font-size:clamp(24px,6vw,31px)}
+#app .calendar-card{padding:11px 12px 12px}
+#app .calendar-heading{margin:0 4px 3px}
+#app .calendar-heading h2{font-size:17px}
+#app .calendar-heading button{padding:8px 12px;min-height:38px}
+#app .calendar-grid{gap:4px;grid-template-columns:repeat(7,minmax(0,1fr))}
+#app .calendar-grid .weekday{padding:5px 0 7px}
+#app .calendar-grid .day{box-sizing:border-box;width:100%;height:45px;min-height:45px;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;position:relative;border:1px solid color-mix(in srgb,var(--accent) 12%,transparent);border-radius:10px;background:color-mix(in srgb,var(--card) 79%,var(--accent) 21%);font-size:14px}
+#app .calendar-grid .day .date-number{flex:0 0 23px;height:23px;line-height:23px;width:23px;display:flex;align-items:center;justify-content:center}
+#app .calendar-grid .day .count-slot{flex:0 0 13px;height:13px;display:flex;justify-content:center;align-items:center}
+#app .calendar-grid .day .count{width:15px;height:14px;min-width:15px;border-radius:4px;font-size:9px;line-height:14px;font-weight:750}
+#app .calendar-grid .day.today,#app .calendar-grid .day.selected{border-radius:10px;outline:0;background:color-mix(in srgb,var(--card) 79%,var(--accent) 21%)}
+#app .calendar-grid .day.today::after,#app .calendar-grid .day.selected::after{content:"";position:absolute;left:50%;top:50%;width:39px;height:39px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;box-sizing:border-box}
+#app .calendar-grid .day.today::after{background:color-mix(in srgb,var(--accent) 22%,transparent);border:2px solid var(--accent)}
+#app .calendar-grid .day.selected:not(.today)::after{border:2px solid var(--accent);background:transparent}
+#app .calendar-grid .day.today .date-number,#app .calendar-grid .day.selected .date-number{position:relative;z-index:1}
+#app .calendar-details{margin-top:12px;padding:13px}
+#app .calendar-details .details-heading{margin-bottom:9px}
+#app .calendar-details .event-list{max-height:215px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:3px}
+#app.theme-dark .calendar-grid .day{background:color-mix(in srgb,var(--card) 79%,#527269);border-color:#ffffff21}
+#app.theme-dark .calendar-grid .day.today,#app.theme-dark .calendar-grid .day.selected{background:color-mix(in srgb,var(--card) 79%,#527269)}
+#dialog:has(.passport-actions){max-height:calc(100dvh - 20px)}
+#dialog .passport-actions{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:9px;margin-top:8px}
+#dialog .passport-actions button{width:100%;min-width:0;margin:0;padding:12px 5px;font-size:clamp(13px,3.5vw,16px)}
+#dialog:has(.passport-actions)>#closeDialog{display:none}
+@media(max-width:390px){#app .calendar-grid .day{height:41px;min-height:41px}#app .calendar-grid .day.today::after,#app .calendar-grid .day.selected::after{width:37px;height:37px}}
+
+/* v1.7 — mobile viewport calendar, restrained modal geometry, unified headings */
+#app #screen>h1,#app #screen>.row:first-child h1{font-size:clamp(23px,5.7vw,29px);line-height:1.2;margin:8px 0 12px}
+#app.calendar-mode{height:100dvh;min-height:0;padding-bottom:0;overflow:hidden;display:flex;flex-direction:column}
+#app.calendar-mode header{flex:0 0 auto}
+#app.calendar-mode main{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;padding-bottom:0;overflow:hidden}
+#app.calendar-mode #screen{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding-bottom:calc(93px + env(safe-area-inset-bottom))}
+#app.calendar-mode #screen>h1{flex:0 0 auto}
+#app.calendar-mode .calendar-card{flex:0 0 auto;margin:3px 0 8px}
+#app.calendar-mode .calendar-details{flex:1 1 0;min-height:0;display:flex;flex-direction:column;overflow:hidden;margin:0 0 5px}
+#app.calendar-mode .calendar-details .details-heading{flex:0 0 auto}
+#app.calendar-mode .calendar-details .event-list{flex:1 1 auto;min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+#app .calendar-grid .day.today::after{background:var(--accent);border:0;opacity:.85}
+#app .calendar-grid .day.today .date-number{color:#fff}
+#app .calendar-grid .day.selected:not(.today)::after{border:1.5px solid var(--accent);background:transparent}
+#app .calendar-grid .day.selected:not(.today){outline:0;border-color:transparent}
+#app .calendar-grid .day.selected:not(.today) .date-number{color:var(--ink)}
+#app .calendar-grid .day.today .count-slot,#app .calendar-grid .day.selected .count-slot{visibility:hidden}
+#dialog{padding:12px 15px;max-height:calc(100dvh - 18px)}
+#dialogBody>h2{margin:3px 0 6px;font-size:19px;line-height:1.2}
+#dialogBody>p.muted{margin:4px 0 8px;line-height:1.35;font-size:12px}
+#dialogBody label{margin:7px 0 3px;font-size:12px}
+#dialogBody input,#dialogBody select{padding:8px 10px;min-height:38px}
+#dialogBody .palette-preview{padding:9px 12px;margin:9px 0;gap:10px}
+#dialogBody .palette-preview .preview-flower{font-size:32px}
+#dialogBody .notice{padding:8px 10px;margin:7px 0;line-height:1.3}
+#dialogBody h3{margin:7px 0}
+#dialogBody hr{margin:9px 0}
+#dialogBody .actions{flex-wrap:nowrap}
+#dialogBody .actions button{padding:9px 6px;font-size:clamp(11px,3vw,14px)}
+#dialog:has(#palette)>#closeDialog{margin-top:8px;padding:9px}
+#dialog:has(#yieldForm)>#closeDialog{display:none}
+#dialogBody .yield-actions{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:7px;margin-top:8px}
+#dialogBody .yield-actions button{min-width:0;padding:9px 5px;font-size:clamp(11px,3vw,14px)}
+#dialogBody #yieldForm #quoteHint{font-size:12px;line-height:1.25;margin:5px 0}
+#dialog:has(.passport-actions){padding:10px 13px}
+#dialog .passport-head{margin-bottom:8px;gap:7px}
+#dialog .passport-tabs{margin-bottom:8px;gap:5px}
+#dialog .passport-tabs button{padding:8px 4px}
+#dialog .passport-content{margin-bottom:7px}
+#dialog .passport-content .facts{gap:5px}
+#dialog .passport-content .facts>div{padding:7px}
+#dialog .passport-content .card{margin:6px 0;padding:10px}
+#dialog .passport-content .card p{margin:4px 0;line-height:1.3}
+#dialog .passport-actions button{padding:9px 5px}
+@media(max-height:700px){#app.calendar-mode .calendar-grid .day{height:clamp(29px,5.1dvh,41px);min-height:0}#app.calendar-mode .calendar-grid .weekday{padding:2px 0 3px}#app.calendar-mode .calendar-card{padding:7px 10px}#app.calendar-mode .calendar-grid .day.today::after,#app.calendar-mode .calendar-grid .day.selected::after{width:32px;height:32px}#app.calendar-mode #screen{padding-bottom:calc(79px + env(safe-area-inset-bottom))}}
+
+/* Узгоджені точкові правки 16.10.2026; геометрія інших елементів не змінена. */
+#app .calendar-grid .day.today.selected::after{background:transparent;border:2px solid var(--accent)}
+#app .calendar-grid .day.today.selected{background:color-mix(in srgb,var(--card) 79%,var(--accent) 21%)}
+#app.theme-dark .calendar-grid .day.today.selected::after{background:transparent;border:2px solid var(--accent)}
+#app .analysis-help{padding:10px 14px;margin:8px 0 13px}
+#app .analysis-help summary{cursor:pointer;color:var(--accent);font-size:13px;font-weight:650}
+#app .analysis-help p{margin:10px 0 2px;font-size:13px}
+
+/* v1.9: виключно кольори та автономні художні фони; компонування незмінне. */
+#app[data-palette="rose"]{--ink:#22354c;--accent:#43317e;--accent2:#43317e;--bg1:#e6d8ef;--bg2:#faf3fd;--card:#fffffff0;--theme-art:url("../assets/themes/rose.svg")}
+#app.theme-dark[data-palette="rose"]{--ink:#f8f8ff;--accent:#7b4ba6;--bg1:#101928;--bg2:#43317e;--card:#162138ed}
+#app[data-palette="peach"]{--ink:#22354c;--accent:#4b2a87;--accent2:#4b2a87;--bg1:#e6d3f6;--bg2:#f9f1ff;--card:#fffffff0;--theme-art:url("../assets/themes/peach.svg")}
+#app.theme-dark[data-palette="peach"]{--ink:#f8f8ff;--accent:#9558ce;--bg1:#101928;--bg2:#4b2a87;--card:#162138ed}
+#app[data-palette="lavender"]{--ink:#22354c;--accent:#377d31;--accent2:#377d31;--bg1:#eaf8b9;--bg2:#f8ffe4;--card:#fffffff0;--theme-art:url("../assets/themes/lavender.svg")}
+#app.theme-dark[data-palette="lavender"]{--ink:#f8f8ff;--accent:#93d335;--bg1:#101928;--bg2:#377d31;--card:#162138ed}
+#app[data-palette="berry"]{--ink:#f8f5ff;--accent:#e9c76e;--accent2:#f5d987;--bg1:#112e70;--bg2:#dbe7ff;--card:#281d47ed;--theme-art:url("../assets/themes/berry.svg")}
+#app.theme-dark[data-palette="berry"]{--ink:#f8f8ff;--accent:#f0ce77;--accent2:#f4dc96;--bg1:#091b49;--bg2:#123e88;--card:#102553ed}
+#app[data-palette="autumn"]{--ink:#57311e;--accent:#ff9c1c;--accent2:#c62917;--bg1:#fff0c2;--bg2:#fff7dc;--card:#fffffff0;--theme-art:url("../assets/themes/autumn.svg")}
+#app.theme-dark[data-palette="autumn"]{--ink:#f8f8ff;--accent:#e5bd66;--bg1:#101928;--bg2:#c62917;--card:#162138ed}
+#app[data-palette="sky"]{--ink:#22354c;--accent:#0dc5c5;--accent2:#007baf;--bg1:#d9ffff;--bg2:#f2ffff;--card:#fffffff0;--theme-art:url("../assets/themes/sky.svg")}
+#app.theme-dark[data-palette="sky"]{--ink:#f8f8ff;--accent:#0dc5c5;--bg1:#101928;--bg2:#007baf;--card:#162138ed}
+#app[data-palette="lime"]{--ink:#22354c;--accent:#6a1bd1;--accent2:#6a1bd1;--bg1:#250c42;--bg2:#f5d9ff;--card:#fffffff0;--theme-art:url("../assets/themes/lime.svg")}
+#app.theme-dark[data-palette="lime"]{--ink:#f8f8ff;--accent:#ad198e;--bg1:#101928;--bg2:#6a1bd1;--card:#162138ed}
+#app[data-palette="emerald"]{--ink:#22354c;--accent:#c9a151;--accent2:#c9a151;--bg1:#f3f5f7;--bg2:#ffffff;--card:#fffffff0;--theme-art:url("../assets/themes/emerald.svg")}
+#app.theme-dark[data-palette="emerald"]{--ink:#f8f8ff;--accent:#274a73;--bg1:#101928;--bg2:#c9a151;--card:#162138ed}
+#app{background-image:linear-gradient(145deg,color-mix(in srgb,var(--bg1) 28%,transparent),color-mix(in srgb,var(--bg2) 30%,transparent)),var(--theme-art);background-size:cover,cover;background-position:center,center;background-attachment:scroll,scroll}
+#app.theme-dark{background-image:linear-gradient(145deg,#070c20b8,#070c20b0),var(--theme-art)}
+#app[data-palette="autumn"] .day .count,#app[data-palette="autumn"] .pill{color:#684008}
+
+/* v1.11: лише корекція палітр; жодних змін розмітки чи логіки. */
+/* Сапфір: усунуто успадковані зелені/помаранчеві тони в індикаторах та картках. */
+#app[data-palette="berry"] .pill,#app[data-palette="berry"] .badge{background:#f2d88b29;color:#f3d77e}
+#app[data-palette="berry"] .day .count{color:#f1cf72}
+#app[data-palette="berry"] .day.selected .count{color:#fff1bf}
+#app[data-palette="berry"] .day.today{outline-color:#e5c56c}
+#app[data-palette="berry"] nav button.active{color:#f2d78b;background:#e8c66c24}
+#app[data-palette="berry"] .facts>div{background:#f2d88b1b}
+#app[data-palette="berry"] .item{background:#1b3269e8;color:#f7f3e7;border-color:#d7bb7545}
+#app[data-palette="berry"] .item small{color:#d9dfed}
+#app[data-palette="berry"] .secondary{background:#d8c084;color:#172c5a}
+#app[data-palette="berry"] .notice{background:#e7c87d33;color:#fff0c7}
+#app[data-palette="berry"] .compare-table>div{background:#20386c;color:#fff7e5}
+#app[data-palette="berry"] .compare-table .compare-head{background:#35528a}
+#app[data-palette="berry"] .compare-table .compare-label{background:#2c4477}
+#app.theme-dark[data-palette="berry"] .day.selected{background:#2b4e8a}
+#app.theme-dark[data-palette="berry"] .day .count{color:#f2d78b}
+#app.theme-dark[data-palette="berry"] .day.selected .count{color:#fff5d4}
+/* Лагуна: події мають чіткі темно-бірюзові, а не блідо-голубі індикатори. */
+#app[data-palette="sky"]{--accent:#007f86;--accent2:#006b99}
+#app.theme-dark[data-palette="sky"]{--accent:#61e3dd;--accent2:#8dd7fa}
+#app[data-palette="sky"] .day .count{color:#006d77}
+#app[data-palette="sky"] .day.selected .count{color:#ffffff}
+#app[data-palette="sky"] .pill,#app[data-palette="sky"] .badge{background:#007f8620;color:#005c69}
+#app.theme-dark[data-palette="sky"] .pill,#app.theme-dark[data-palette="sky"] .badge{background:#61e3dd20;color:#a3fff3}
