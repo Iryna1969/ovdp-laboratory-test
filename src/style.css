@@ -539,18 +539,18 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   color:var(--ink)!important;
 }
 
-/* v1.25: restore the 16 October vertical rhythm, preserving v1.24 circle
-   size and the clean selected tile. Keep a breathing gap above counters. */
+/* v1.26: date markers return to the approved v1.24 position.
+   Counter positions are adjusted independently to match 16 October. */
 #app .calendar-grid .day .date-number,
 #app .calendar-grid .day.today .date-number,
 #app .calendar-grid .day.selected .date-number,
 #app .calendar-grid .day.today.selected .date-number{
   position:relative!important;
-  top:-5px!important;
+  top:0!important;
 }
 #app .calendar-grid .day .count-slot{
   position:relative!important;
-  top:-5px!important;
+  top:-3px!important;
 }
 /* Today is a solid accent disc unless it is also the selected day. */
 #app .calendar-grid .day.today:not(.selected) .date-number{
