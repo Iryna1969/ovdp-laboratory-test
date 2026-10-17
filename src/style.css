@@ -431,3 +431,40 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   background:transparent!important;
   color:var(--ink)!important;
 }
+
+/* v1.23: correct flex geometry for compact calendar tiles. The former 29px
+   date + 17px counter overflowed 41–45px cells. Keep v1.22 visual states. */
+#app .calendar-grid .day{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  overflow:hidden!important;
+}
+#app .calendar-grid .day .date-number,
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.selected .date-number{
+  box-sizing:border-box!important;
+  flex:0 0 23px!important;
+  width:23px!important;height:23px!important;
+  min-width:23px!important;min-height:23px!important;
+  max-width:23px!important;max-height:23px!important;
+  line-height:1!important;
+  margin:0!important;padding:0!important;
+  border-radius:50%!important;
+}
+#app .calendar-grid .day .count-slot{
+  box-sizing:border-box!important;
+  flex:0 0 13px!important;
+  height:13px!important;min-height:13px!important;max-height:13px!important;
+  margin:0!important;padding:0!important;
+  transform:none!important;
+}
+#app .calendar-grid .day .count{
+  box-sizing:border-box!important;
+  flex:0 0 auto!important;
+  height:auto!important;min-height:0!important;
+  line-height:1!important;
+  margin:0!important;padding:0!important;
+}
