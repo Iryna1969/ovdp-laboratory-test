@@ -6,7 +6,7 @@ on:
       - lab-v1.21-test
     paths:
       - '*v1.22*.zip'
-
+      - '.github/workflows/install-lab-v121.yml'
 permissions:
   contents: write
 
