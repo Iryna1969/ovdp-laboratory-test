@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          archive="$(find . -maxdepth 1 -type f -name '*v1.23*.zip' -print | sort | tail -n 1)"
+          archive="$(find . -maxdepth 1 -type f -name '*v1.28*.zip' -print | sort | tail -n 1)"
           test -n "$archive"
 
           mkdir -p /tmp/ovdp-install
