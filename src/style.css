@@ -538,3 +538,23 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   background:color-mix(in srgb,var(--accent) 35%,transparent)!important;
   color:var(--ink)!important;
 }
+
+/* v1.25: restore the 16 October vertical rhythm, preserving v1.24 circle
+   size and the clean selected tile. Keep a breathing gap above counters. */
+#app .calendar-grid .day .date-number,
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  position:relative!important;
+  top:-5px!important;
+}
+#app .calendar-grid .day .count-slot{
+  position:relative!important;
+  top:-5px!important;
+}
+/* Today is a solid accent disc unless it is also the selected day. */
+#app .calendar-grid .day.today:not(.selected) .date-number{
+  background:var(--accent)!important;
+  border:2px solid var(--accent)!important;
+  color:#fff!important;
+}
