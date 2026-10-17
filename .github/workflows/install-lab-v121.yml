@@ -5,7 +5,7 @@ on:
     branches:
       - lab-v1.21-test
     paths:
-      - '*v1.30*.zip'
+      - '*v1.31*.zip'
       - '.github/workflows/install-lab-v121.yml'
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          archive="$(find . -maxdepth 1 -type f -name '*v1.30*.zip' -print | sort | tail -n 1)"
+          archive="$(find . -maxdepth 1 -type f -name '*v1.31*.zip' -print | sort | tail -n 1)"
           test -n "$archive"
 
           mkdir -p /tmp/ovdp-install
