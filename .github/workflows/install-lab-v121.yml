@@ -1,0 +1,58 @@
+name: Install Laboratory v1.21
+
+on:
+  push:
+    branches:
+      - lab-v1.21-test
+    paths:
+      - '*v1.21*.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v4
+        with:
+          ref: lab-v1.21-test
+
+      - name: Extract application
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          archive="$(find . -maxdepth 1 -type f -name '*v1.21*.zip' -print | sort | tail -n 1)"
+          test -n "$archive"
+
+          mkdir -p /tmp/ovdp-install
+          unzip -q "$archive" -d /tmp/ovdp-install
+
+          for item in index.html sw.js manifest.webmanifest src assets data; do
+            test -e "/tmp/ovdp-install/$item"
+          done
+
+          cp /tmp/ovdp-install/index.html .
+          cp /tmp/ovdp-install/sw.js .
+          cp /tmp/ovdp-install/manifest.webmanifest .
+
+          mkdir -p src assets data
+          cp -R /tmp/ovdp-install/src/. src/
+          cp -R /tmp/ovdp-install/assets/. assets/
+          cp -R /tmp/ovdp-install/data/. data/
+
+      - name: Commit application
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.html sw.js manifest.webmanifest src assets data
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Install Laboratory v1.21"
+            git push origin HEAD:lab-v1.21-test
+          fi
