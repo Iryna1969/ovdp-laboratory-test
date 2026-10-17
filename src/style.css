@@ -582,3 +582,21 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 #app #screen>h1,
 #app #screen h2{color:var(--ink)!important;text-shadow:none!important}
 #app header .brand small{color:var(--ink)!important;opacity:.78!important}
+
+/* v1.28: restore large circular markers while preserving event counter positions. */
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  box-sizing:border-box!important;
+  flex:0 0 35px!important;
+  width:35px!important;height:35px!important;
+  min-width:35px!important;min-height:35px!important;
+  max-width:35px!important;max-height:35px!important;
+  margin-bottom:-11px!important;
+  top:-2px!important;
+  padding:0 0 2px!important;
+  border-radius:50%!important;
+}
+#app .calendar-grid .day:not(.selected):not(.today) .date-number{
+  padding:0 0 4px!important;
+}
