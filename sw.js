@@ -1,6 +1,6 @@
 // Offline shell, versioned independently from user data in IndexedDB.
-const CACHE='ovdp-lab-shell-v110';
-const ASSETS=['./','./index.html','./src/app.js','./src/db.js','./src/nbu.js','./src/yield.js','./src/forecast.js','./src/compare.js','./src/style.css','./manifest.webmanifest','./assets/icon.svg','./assets/themes/rose.svg','./assets/themes/peach.svg','./assets/themes/lavender.svg','./assets/themes/berry.svg','./assets/themes/autumn.svg','./assets/themes/sky.svg','./assets/themes/lime.svg','./assets/themes/emerald.svg','./data/nbu-snapshot.json'];
+const CACHE='ovdp-lab-shell-v120';
+const ASSETS=['./','./index.html','./src/app.js','./src/db.js','./src/nbu.js','./src/yield.js','./src/forecast.js','./src/compare.js','./src/style.css','./manifest.webmanifest','./assets/icon.svg','./assets/themes/rose.webp','./assets/themes/peach.webp','./assets/themes/lavender.webp','./assets/themes/berry.webp','./assets/themes/autumn.webp','./assets/themes/sky.webp','./assets/themes/lime.webp','./assets/themes/emerald.webp','./data/nbu-snapshot.json'];
 self.addEventListener('install',event=>event.waitUntil((async()=>{
   const cache=await caches.open(CACHE);
   await cache.addAll(ASSETS);

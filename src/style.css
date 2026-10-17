@@ -195,21 +195,21 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 #app .analysis-help p{margin:10px 0 2px;font-size:13px}
 
 /* v1.9: виключно кольори та автономні художні фони; компонування незмінне. */
-#app[data-palette="rose"]{--ink:#22354c;--accent:#43317e;--accent2:#43317e;--bg1:#e6d8ef;--bg2:#faf3fd;--card:#fffffff0;--theme-art:url("../assets/themes/rose.svg")}
+#app[data-palette="rose"]{--ink:#22354c;--accent:#43317e;--accent2:#43317e;--bg1:#e6d8ef;--bg2:#faf3fd;--card:#fffffff0;--theme-art:url("../assets/themes/rose.webp")}
 #app.theme-dark[data-palette="rose"]{--ink:#f8f8ff;--accent:#7b4ba6;--bg1:#101928;--bg2:#43317e;--card:#162138ed}
-#app[data-palette="peach"]{--ink:#22354c;--accent:#4b2a87;--accent2:#4b2a87;--bg1:#e6d3f6;--bg2:#f9f1ff;--card:#fffffff0;--theme-art:url("../assets/themes/peach.svg")}
+#app[data-palette="peach"]{--ink:#22354c;--accent:#4b2a87;--accent2:#4b2a87;--bg1:#e6d3f6;--bg2:#f9f1ff;--card:#fffffff0;--theme-art:url("../assets/themes/peach.webp")}
 #app.theme-dark[data-palette="peach"]{--ink:#f8f8ff;--accent:#9558ce;--bg1:#101928;--bg2:#4b2a87;--card:#162138ed}
-#app[data-palette="lavender"]{--ink:#22354c;--accent:#377d31;--accent2:#377d31;--bg1:#eaf8b9;--bg2:#f8ffe4;--card:#fffffff0;--theme-art:url("../assets/themes/lavender.svg")}
+#app[data-palette="lavender"]{--ink:#22354c;--accent:#377d31;--accent2:#377d31;--bg1:#eaf8b9;--bg2:#f8ffe4;--card:#fffffff0;--theme-art:url("../assets/themes/lavender.webp")}
 #app.theme-dark[data-palette="lavender"]{--ink:#f8f8ff;--accent:#93d335;--bg1:#101928;--bg2:#377d31;--card:#162138ed}
-#app[data-palette="berry"]{--ink:#f8f5ff;--accent:#1748ba;--accent2:#e8bc53;--bg1:#112e70;--bg2:#dbe7ff;--card:#281d47ed;--theme-art:url("../assets/themes/berry.svg")}
+#app[data-palette="berry"]{--ink:#f8f5ff;--accent:#1748ba;--accent2:#e8bc53;--bg1:#112e70;--bg2:#dbe7ff;--card:#281d47ed;--theme-art:url("../assets/themes/berry.webp")}
 #app.theme-dark[data-palette="berry"]{--ink:#f8f8ff;--accent:#1748ba;--bg1:#101928;--bg2:#e8bc53;--card:#162138ed}
-#app[data-palette="autumn"]{--ink:#f8f5ff;--accent:#ff9c1c;--accent2:#c62917;--bg1:#fff0c2;--bg2:#fff7dc;--card:#fffffff0;--theme-art:url("../assets/themes/autumn.svg")}
+#app[data-palette="autumn"]{--ink:#f8f5ff;--accent:#ff9c1c;--accent2:#c62917;--bg1:#fff0c2;--bg2:#fff7dc;--card:#fffffff0;--theme-art:url("../assets/themes/autumn.webp")}
 #app.theme-dark[data-palette="autumn"]{--ink:#f8f8ff;--accent:#e5bd66;--bg1:#101928;--bg2:#c62917;--card:#162138ed}
-#app[data-palette="sky"]{--ink:#22354c;--accent:#0dc5c5;--accent2:#007baf;--bg1:#d9ffff;--bg2:#f2ffff;--card:#fffffff0;--theme-art:url("../assets/themes/sky.svg")}
+#app[data-palette="sky"]{--ink:#22354c;--accent:#0dc5c5;--accent2:#007baf;--bg1:#d9ffff;--bg2:#f2ffff;--card:#fffffff0;--theme-art:url("../assets/themes/sky.webp")}
 #app.theme-dark[data-palette="sky"]{--ink:#f8f8ff;--accent:#0dc5c5;--bg1:#101928;--bg2:#007baf;--card:#162138ed}
-#app[data-palette="lime"]{--ink:#22354c;--accent:#6a1bd1;--accent2:#6a1bd1;--bg1:#250c42;--bg2:#f5d9ff;--card:#fffffff0;--theme-art:url("../assets/themes/lime.svg")}
+#app[data-palette="lime"]{--ink:#22354c;--accent:#6a1bd1;--accent2:#6a1bd1;--bg1:#250c42;--bg2:#f5d9ff;--card:#fffffff0;--theme-art:url("../assets/themes/lime.webp")}
 #app.theme-dark[data-palette="lime"]{--ink:#f8f8ff;--accent:#ad198e;--bg1:#101928;--bg2:#6a1bd1;--card:#162138ed}
-#app[data-palette="emerald"]{--ink:#22354c;--accent:#c9a151;--accent2:#c9a151;--bg1:#f3f5f7;--bg2:#ffffff;--card:#fffffff0;--theme-art:url("../assets/themes/emerald.svg")}
+#app[data-palette="emerald"]{--ink:#22354c;--accent:#c9a151;--accent2:#c9a151;--bg1:#f3f5f7;--bg2:#ffffff;--card:#fffffff0;--theme-art:url("../assets/themes/emerald.webp")}
 #app.theme-dark[data-palette="emerald"]{--ink:#f8f8ff;--accent:#274a73;--bg1:#101928;--bg2:#c9a151;--card:#162138ed}
 #app{background-image:linear-gradient(145deg,color-mix(in srgb,var(--bg1) 28%,transparent),color-mix(in srgb,var(--bg2) 30%,transparent)),var(--theme-art);background-size:cover,cover;background-position:center,center;background-attachment:scroll,scroll}
 #app.theme-dark{background-image:linear-gradient(145deg,#070c20b8,#070c20b0),var(--theme-art)}
@@ -245,3 +245,168 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 #app[data-palette="autumn"]:not(.theme-dark) header .brand strong,#app[data-palette="autumn"]:not(.theme-dark) #screen>h1{color:#273c36}
 /* Theme-specific card heading colors for amethyst light panels. */
 #app[data-palette="lime"]:not(.theme-dark) .card{color:#24354b}
+
+/* v1.11: calendar geometry fixes — only date circles, not the entire tile. */
+#app .calendar-grid .day.today,
+#app .calendar-grid .day.selected,
+#app.theme-dark .calendar-grid .day.today,
+#app.theme-dark .calendar-grid .day.selected{
+  border-radius:10px;
+  outline:none;
+  background:color-mix(in srgb,var(--card) 85%,var(--accent) 15%);
+}
+#app .calendar-grid .day.today::after,
+#app .calendar-grid .day.selected::after{
+  content:none!important;
+}
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.selected .date-number{
+  width:27px;height:27px;flex:0 0 27px;
+  border-radius:50%;box-sizing:border-box;
+  border:1.5px solid var(--accent);
+  background:color-mix(in srgb,var(--accent) 20%,transparent);
+  color:var(--ink);
+}
+#app .calendar-grid .day.today:not(.selected) .date-number{
+  border-width:2px;
+  background:color-mix(in srgb,var(--accent) 35%,transparent);
+}
+#app .calendar-grid .day.selected .date-number{
+  background:color-mix(in srgb,var(--accent) 25%,transparent);
+}
+/* Lighten overly strong tiles and keep payment counts below the circle. */
+#app .calendar-grid .day .count-slot{flex:0 0 11px;height:11px}
+#app .calendar-grid .day .count-slot .count{transform:none}
+#app .calendar-grid .day.selected .count{color:var(--count-ink,var(--ink))!important}
+#app.theme-dark .calendar-grid .day.selected .count{color:var(--count-ink,#f4e7b7)!important}
+/* A vivid spring-green accent, consistent on dates and bottom navigation. */
+#app[data-palette="lavender"]{--accent:#5caa24;--accent2:#a6d95a;--bg1:#f7fce9;--bg2:#edf7d8}
+#app.theme-dark[data-palette="lavender"]{--accent:#a2dc53;--accent2:#c1e68c;--bg1:#17271b;--bg2:#2b4426}
+#app[data-palette="lavender"] nav button.active{color:#38831d;font-weight:750}
+#app.theme-dark[data-palette="lavender"] nav button.active{color:#b9ed72}
+
+/* v1.12: quiet, airy artwork; preserve functional layout and calendar geometry. */
+#app{background-image:linear-gradient(160deg,#ffffff24,#ffffff0d),var(--theme-art);background-size:cover,cover;background-position:center center}
+#app.theme-dark{background-image:linear-gradient(160deg,#081326d9,#111d31d0),var(--theme-art)}
+#app[data-palette="peach"]{--ink:#55462f;--accent:#a47b21;--bg1:#fffdf6;--bg2:#fff3d5;--card:#ffffffeb}
+#app[data-palette="lavender"]{--ink:#304321;--accent:#73b820;--accent2:#9cd43c;--bg1:#f8ffed;--bg2:#e1f6b8;--card:#ffffffec}
+#app[data-palette="lavender"] nav button.active{color:#45890a;background:#bce87577}
+#app[data-palette="lavender"] .calendar-grid .day.today::after,#app[data-palette="lavender"] .calendar-grid .day.selected::after{border-color:#7ac91c}
+#app[data-palette="rose"]{--ink:#393751;--accent:#7970bc;--bg1:#f7f5fd;--bg2:#e5e9f8;--card:#ffffffed}
+#app[data-palette="lime"]{--ink:#40364b;--accent:#8a66ac;--bg1:#faf5ff;--bg2:#dfd1f4;--card:#ffffffed}
+#app[data-palette="berry"]:not(.theme-dark){--ink:#253b61;--accent:#27509a;--bg1:#dce9ff;--bg2:#7298d1;--card:#fffffff0}
+#app[data-palette="berry"]:not(.theme-dark) .card,#app[data-palette="berry"]:not(.theme-dark) .calendar-grid .day,#app[data-palette="berry"]:not(.theme-dark) .calendar-details .event-item{color:#253b61}
+#app[data-palette="berry"]:not(.theme-dark) .card .muted,#app[data-palette="berry"]:not(.theme-dark) .calendar-details .event-item small{color:#586d87}
+#app[data-palette="berry"]:not(.theme-dark) .calendar-grid .day .count{color:#27509a!important}
+#app[data-palette="berry"]:not(.theme-dark) header .brand strong,#app[data-palette="berry"]:not(.theme-dark) #screen>h1{color:#253b61;text-shadow:none}
+#app[data-palette="autumn"]:not(.theme-dark){--ink:#4c3b30;--accent:#a96a34;--bg1:#fff8e8;--bg2:#ffdfbc;--card:#ffffffec}
+#app[data-palette="sky"]:not(.theme-dark){--ink:#24525b;--accent:#218c9b;--bg1:#f1ffff;--bg2:#c9f4f2;--card:#ffffffec}
+#app[data-palette="emerald"]:not(.theme-dark){--ink:#344356;--accent:#607c9e;--bg1:#f7f9fb;--bg2:#e6eaf1;--card:#ffffffef}
+#app .calendar-grid .day.selected:not(.today){border-radius:10px!important;outline:0!important;background:color-mix(in srgb,var(--card) 90%,var(--accent) 10%)!important}
+#app .calendar-grid .day.selected:not(.today)::after{border-radius:50%;background:color-mix(in srgb,var(--accent) 19%,transparent)!important;border:1.5px solid var(--accent)}
+#app .calendar-grid .day.today.selected::after{background:color-mix(in srgb,var(--accent) 19%,transparent)!important}
+
+/* v1.13 — calendar: no oval or tile-shaped selection halo. */
+#app .calendar-grid .day.today,
+#app .calendar-grid .day.selected,
+#app.theme-dark .calendar-grid .day.today,
+#app.theme-dark .calendar-grid .day.selected{
+ border-radius:10px!important;outline:0!important;box-shadow:none!important;
+}
+#app .calendar-grid .day.today::before,
+#app .calendar-grid .day.selected::before,
+#app .calendar-grid .day.today::after,
+#app .calendar-grid .day.selected::after{content:none!important;display:none!important}
+#app .calendar-grid .day.selected .date-number{
+ border-radius:50%!important;border:2px solid var(--accent)!important;
+ background:color-mix(in srgb,var(--accent) 29%,transparent)!important;
+ box-shadow:none!important;
+}
+#app .calendar-grid .day.today:not(.selected) .date-number{
+ border-radius:50%!important;border:2px solid var(--accent)!important;
+ background:color-mix(in srgb,var(--accent) 42%,transparent)!important;
+}
+#app .calendar-grid .day.today.selected .date-number{
+ background:color-mix(in srgb,var(--accent) 29%,transparent)!important;
+}
+/* Calendar counters stay bare and a little above the bottom edge. */
+#app .calendar-grid .day .count-slot{transform:translateY(-3px)!important}
+#app .calendar-grid .day .count{background:transparent!important;box-shadow:none!important;border:0!important}
+/* A single payment row has the same dimensions as rows in longer lists. */
+#app .calendar-details .event-list{align-content:start!important;align-items:start!important;grid-auto-rows:max-content!important}
+#app .calendar-details .event-item{align-self:start!important;flex-grow:0!important}
+/* Dark mode keeps the artwork visible but subordinate to information. */
+#app.theme-dark{background-image:linear-gradient(160deg,#081326b3,#111d31b9),var(--theme-art)!important}
+/* Bright green chosen for spring foliage: date circles and selected nav. */
+#app[data-palette="lavender"]{--accent:#83c91a;--accent2:#b4e655}
+#app[data-palette="lavender"] nav button.active{background:#82bd2eaa!important;color:#173a13!important}
+#app.theme-dark[data-palette="lavender"] nav button.active{color:#f4ffdc!important}
+/* Keep the two violet themes visually distinct in both modes. */
+#app[data-palette="rose"]{--accent:#6855ad;--bg1:#f9f7ff;--bg2:#e9e6f7}
+#app[data-palette="lime"]{--accent:#9d64bc;--bg1:#f8f2fc;--bg2:#e4d3f0}
+/* White and golden flower palette is distinct from lavender and violet. */
+#app[data-palette="peach"]{--accent:#d99d1a;--bg1:#fffdf9;--bg2:#fff0cc}
+
+/* v1.14: легкі різні художні композиції, без зміни геометрії інтерфейсу. */
+#app[data-palette="autumn"]:not(.theme-dark){--ink:#283a35;--card:#fffffff2;--accent:#b77714}
+#app[data-palette="berry"]:not(.theme-dark){--ink:#233d65;--card:#fffffff0;--accent:#315ea8}
+#app[data-palette="lime"]:not(.theme-dark){--ink:#3d3359;--accent:#7450aa}
+#app[data-palette="peach"]:not(.theme-dark){--ink:#4a3c2c;--accent:#b18316}
+#app[data-palette="rose"]:not(.theme-dark){--ink:#47324e;--accent:#a15c9c}
+#app[data-palette="lavender"]:not(.theme-dark){--ink:#263d25;--accent:#70ae15}
+#app.theme-dark[data-palette="berry"]{--accent:#8caef5}
+#app.theme-dark[data-palette="autumn"]{--accent:#f2bd70}
+
+/* v1.15: selected day retains the same tile geometry and fill as its neighbours.
+   Only the round date marker carries selection; no oval/halo on the tile. */
+#app .calendar-grid .day.selected:not(.today){
+  background:var(--day-bg, color-mix(in srgb,var(--card) 90%,var(--accent) 10%))!important;
+}
+#app .calendar-grid .day.selected .date-number{
+  width:2.05em!important;height:2.05em!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  aspect-ratio:1 / 1!important;flex:0 0 auto!important;
+}
+
+/* v1.16 — calendar: retain the number of events on today's and selected dates.
+   Earlier rules hid the counter completely on these dates. */
+#app .calendar-grid .day.today .count-slot,
+#app .calendar-grid .day.selected .count-slot{
+  visibility:visible!important;
+}
+#app .calendar-grid .day.today .count,
+#app .calendar-grid .day.selected .count{
+  color:var(--ink)!important;
+  text-shadow:none!important;
+}
+#app.theme-dark .calendar-grid .day.today .count,
+#app.theme-dark .calendar-grid .day.selected .count{
+  color:#f3e6ba!important;
+}
+
+/* v1.17: the round date marker must fit within its own calendar row.
+   Prevent collision with the event count while keeping a square day tile. */
+#app .calendar-grid .day{
+  grid-template-rows:29px 17px!important;
+  gap:1px!important;
+}
+#app .calendar-grid .day .date-number{
+  width:29px!important;height:29px!important;
+  min-width:29px!important;min-height:29px!important;
+  max-width:29px!important;max-height:29px!important;
+  line-height:1!important;
+}
+#app .calendar-grid .day .count-slot{
+  height:17px!important;
+  min-height:17px!important;
+  transform:none!important;
+}
+#app .calendar-grid .day .count{
+  height:16px!important;min-height:16px!important;
+  line-height:16px!important;
+}
+
+/* v1.20: restore approved calendar behavior: hide count on selected day.
+   Details panel shows the number of distinct ISIN beside the date. */
+#app .calendar-grid .day.selected .count-slot,
+#app .calendar-grid .day.today .count-slot{visibility:hidden!important}
