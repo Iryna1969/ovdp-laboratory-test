@@ -410,3 +410,24 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
    Details panel shows the number of distinct ISIN beside the date. */
 #app .calendar-grid .day.selected .count-slot,
 #app .calendar-grid .day.today .count-slot{visibility:hidden!important}
+
+/* v1.22: selected date is a light tile with a true circular marker around its numeral. */
+#app .calendar-grid .day.selected,
+#app .calendar-grid .day.selected:not(.today),
+#app.theme-dark .calendar-grid .day.selected,
+#app.theme-dark .calendar-grid .day.selected:not(.today){
+  background:var(--card)!important;
+  border-color:transparent!important;
+}
+#app .calendar-grid .day.selected::after,
+#app .calendar-grid .day.today.selected::after{content:none!important}
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  box-sizing:border-box!important;
+  width:29px!important;height:29px!important;
+  min-width:29px!important;min-height:29px!important;
+  border:1.5px solid var(--accent)!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  color:var(--ink)!important;
+}
