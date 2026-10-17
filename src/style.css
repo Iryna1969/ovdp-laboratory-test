@@ -468,3 +468,73 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   line-height:1!important;
   margin:0!important;padding:0!important;
 }
+
+/* v1.24: preserve the compact date-over-count layout and keep circular
+   selection markers entirely inside the calendar tile at all screen heights. */
+#app .calendar-grid .day{
+  box-sizing:border-box!important;
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  padding:3px 0 0!important;
+  gap:0!important;
+  overflow:hidden!important;
+  border-radius:10px!important;
+  outline:none!important;
+}
+#app .calendar-grid .day .date-number,
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  box-sizing:border-box!important;
+  display:flex!important;
+  flex:0 0 24px!important;
+  width:24px!important;height:24px!important;
+  min-width:24px!important;min-height:24px!important;
+  max-width:24px!important;max-height:24px!important;
+  aspect-ratio:1 / 1!important;
+  align-items:center!important;justify-content:center!important;
+  margin:0!important;padding:0!important;
+  border-radius:50%!important;
+  line-height:1!important;
+  transform:none!important;
+}
+#app .calendar-grid .day .count-slot{
+  box-sizing:border-box!important;
+  flex:0 0 12px!important;
+  height:12px!important;min-height:12px!important;max-height:12px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  margin:-2px 0 0!important;padding:0!important;
+  transform:none!important;
+}
+#app .calendar-grid .day .count{
+  box-sizing:border-box!important;
+  display:block!important;
+  flex:none!important;
+  height:auto!important;min-height:0!important;
+  margin:0!important;padding:0!important;
+  line-height:1!important;
+}
+#app .calendar-grid .day.today::before,
+#app .calendar-grid .day.today::after,
+#app .calendar-grid .day.selected::before,
+#app .calendar-grid .day.selected::after{content:none!important;display:none!important}
+#app .calendar-grid .day.selected,
+#app .calendar-grid .day.selected:not(.today),
+#app.theme-dark .calendar-grid .day.selected{
+  background:var(--card)!important;
+  border-color:transparent!important;
+}
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  border:1.5px solid var(--accent)!important;
+  background:transparent!important;
+  color:var(--ink)!important;
+}
+#app .calendar-grid .day.today:not(.selected) .date-number{
+  border:2px solid var(--accent)!important;
+  background:color-mix(in srgb,var(--accent) 35%,transparent)!important;
+  color:var(--ink)!important;
+}
