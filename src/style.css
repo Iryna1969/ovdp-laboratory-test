@@ -558,3 +558,27 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   border:2px solid var(--accent)!important;
   color:#fff!important;
 }
+
+/* v1.27 — final calendar polish and clean palette preview for usability testing.
+   Preserve counter position, date discs, calendar tile dimensions and logic. */
+#app .calendar-grid .day .date-number,
+#app .calendar-grid .day.today .date-number,
+#app .calendar-grid .day.selected .date-number,
+#app .calendar-grid .day.today.selected .date-number{
+  padding:0 0 3px!important; /* raise numeral within the unchanged 24px circle */
+}
+/* Plain, softly blended palette backgrounds without decorative imagery. */
+#app{
+  background-image:linear-gradient(155deg,var(--bg1) 0%,var(--bg2) 100%)!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+#app.theme-dark{
+  background-image:linear-gradient(155deg,var(--bg1) 0%,var(--bg2) 100%)!important;
+}
+#app::before{content:none!important;display:none!important}
+/* Legible headings and brand in all eight palettes, light and dark. */
+#app header .brand strong,
+#app #screen>h1,
+#app #screen h2{color:var(--ink)!important;text-shadow:none!important}
+#app header .brand small{color:var(--ink)!important;opacity:.78!important}
